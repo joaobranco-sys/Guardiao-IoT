@@ -70,11 +70,20 @@ O circuito editável está no `diagram.json` e no [projeto do Wokwi](https://wok
 ### Clonar o repositório
 
 ```bash
-git clone URL_DO_REPOSITORIO.git
-cd Guardiao_IoT
+git clone https://github.com/joaobranco-sys/Guardiao-IoT.git
+cd Guardiao-IoT
 ```
 
-Substitua a URL pelo endereço real do repositório.
+Repositório oficial: [github.com/joaobranco-sys/Guardiao-IoT](https://github.com/joaobranco-sys/Guardiao-IoT).
+
+Após a clonagem, os principais itens exigidos para a entrega estarão disponíveis em:
+
+- [`sketch.ino`](sketch.ino): núcleo da funcionalidade de segurança implementado em C/C++.
+- [`diagram.json`](diagram.json): circuito completo e editável do Wokwi.
+- [`docs/diagrama.svg`](docs/diagrama.svg): diagrama de conexões visível diretamente no README.
+- [`libraries.txt`](libraries.txt): dependências utilizadas na simulação.
+- [`platformio.ini`](platformio.ini): configuração para compilação com PlatformIO.
+- [`wokwi.toml`](wokwi.toml): configuração do simulador Wokwi.
 
 ### Executar no Wokwi
 
