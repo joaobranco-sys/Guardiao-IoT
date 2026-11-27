@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "author": "Equipe Guardiao IoT",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 120, "left": 0, "attrs": {} },
+    { "type": "wokwi-ssd1306", "id": "oled", "top": -140, "left": 300, "attrs": { "i2cAddress": "0x3c" } },
+    { "type": "wokwi-membrane-keypad", "id": "keypad", "top": 100, "left": 430, "attrs": {} },
+    { "type": "wokwi-pushbutton", "id": "rfid", "top": -100, "left": -250, "attrs": { "color": "blue", "label": "RFID valido", "bounce": "0" } },
+    { "type": "wokwi-pir-motion-sensor", "id": "pir", "top": 400, "left": -250, "attrs": {} },
+    { "type": "wokwi-slide-switch", "id": "tamper", "top": 190, "left": -250, "attrs": { "label": "Violacao" } },
+    { "type": "wokwi-servo", "id": "servo", "top": -110, "left": 610, "attrs": {} },
+    { "type": "wokwi-buzzer", "id": "buzzer", "top": 470, "left": 100, "attrs": { "volume": "0.03" } },
+    { "type": "wokwi-led", "id": "green", "top": 450, "left": 300, "attrs": { "color": "green", "label": "Acesso" } },
+    { "type": "wokwi-led", "id": "red", "top": 450, "left": 390, "attrs": { "color": "red", "label": "Alarme" } },
+    { "type": "wokwi-resistor", "id": "rGreen", "top": 525, "left": 300, "rotate": 90, "attrs": { "value": "220" } },
+    { "type": "wokwi-resistor", "id": "rRed", "top": 525, "left": 390, "rotate": 90, "attrs": { "value": "220" } }
+  ],
+  "connections": [
+    [ "esp:21", "oled:SDA", "green", [ "h30", "v-210", "*", "v25" ] ],
+    [ "esp:22", "oled:SCL", "blue", [ "h45", "v-225", "*", "v35" ] ],
+    [ "esp:3V3", "oled:VCC", "red", [ "h60", "v-240", "*", "v45" ] ],
+    [ "esp:GND.1", "oled:GND", "black", [ "h75", "v-255", "*", "v55" ] ],
+
+    [ "esp:13", "keypad:R1", "purple", [ "h70", "v130", "*", "v35" ] ],
+    [ "esp:12", "keypad:R2", "purple", [ "h85", "v145", "*", "v35" ] ],
+    [ "esp:14", "keypad:R3", "purple", [ "h100", "v160", "*", "v35" ] ],
+    [ "esp:27", "keypad:R4", "purple", [ "h115", "v175", "*", "v35" ] ],
+    [ "esp:26", "keypad:C1", "orange", [ "h130", "v190", "*", "v35" ] ],
+    [ "esp:25", "keypad:C2", "orange", [ "h145", "v205", "*", "v35" ] ],
+    [ "esp:33", "keypad:C3", "orange", [ "h160", "v220", "*", "v35" ] ],
+    [ "esp:32", "keypad:C4", "orange", [ "h175", "v235", "*", "v35" ] ],
+
+    [ "rfid:1.l", "esp:4", "blue", [ "h40", "v90", "*", "h-25" ] ],
+    [ "rfid:2.l", "esp:GND.2", "black", [ "h25", "v105", "*", "h-35" ] ],
+    [ "pir:VCC", "esp:3V3", "red", [ "h25", "v-55", "*", "h-55" ] ],
+    [ "pir:GND", "esp:GND.2", "black", [ "h40", "v-40", "*", "h-45" ] ],
+    [ "pir:OUT", "esp:34", "green", [ "h55", "v-25", "*", "h-35" ] ],
+    [ "tamper:1", "esp:GND.2", "black", [ "h30", "v-30", "*", "h-65" ] ],
+    [ "tamper:2", "esp:35", "yellow", [ "h45", "v-15", "*", "h-55" ] ],
+    [ "tamper:3", "esp:3V3", "red", [ "h60", "*", "h-45" ] ],
+
+    [ "servo:PWM", "esp:18", "orange", [ "h-30", "v180", "*", "h35" ] ],
+    [ "servo:V+", "esp:5V", "red", [ "h-45", "v195", "*", "h50" ] ],
+    [ "servo:GND", "esp:GND.1", "black", [ "h-60", "v210", "*", "h65" ] ],
+    [ "buzzer:1", "esp:19", "orange", [ "v-30", "*", "v35" ] ],
+    [ "buzzer:2", "esp:GND.1", "black", [ "v-45", "*", "v50" ] ],
+    [ "green:A", "esp:16", "green", [ "v-25", "*", "v40" ] ],
+    [ "green:C", "rGreen:1", "green", [ "v10" ] ],
+    [ "rGreen:2", "esp:GND.1", "black", [ "v20", "h-40", "*", "v55" ] ],
+    [ "red:A", "esp:17", "red", [ "v-25", "*", "v40" ] ],
+    [ "red:C", "rRed:1", "red", [ "v10" ] ],
+    [ "rRed:2", "esp:GND.1", "black", [ "v20", "h-55", "*", "v70" ] ]
+  ],
+  "dependencies": {}
+}

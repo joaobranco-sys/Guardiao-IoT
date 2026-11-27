@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+  <style>.box{fill:#fff;stroke:#17324d;stroke-width:3;rx:18}.title{font:700 28px Arial;fill:#fff}.h{font:700 22px Arial;fill:#17324d}.t{font:17px Arial;fill:#294b68}.wire{stroke:#e07a2d;stroke-width:4;fill:none;marker-end:url(#a)}.input{fill:#e9f5ff}.output{fill:#fff1e8}.core{fill:#17324d}.small{font:14px Arial;fill:#567}</style>
+  <defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#e07a2d"/></marker></defs>
+  <rect width="1200" height="720" fill="#f5f8fb"/>
+  <text x="600" y="48" text-anchor="middle" class="h" style="font-size:32px">Guardião IoT — Diagrama de Blocos e Pinout</text>
+  <rect x="450" y="250" width="300" height="210" class="box core"/>
+  <text x="600" y="300" text-anchor="middle" class="title">ESP32 DevKit</text>
+  <text x="600" y="340" text-anchor="middle" class="title" style="font-size:20px">Máquina de estados</text>
+  <text x="600" y="375" text-anchor="middle" class="title" style="font-size:18px">Anti-brute-force + AES-128</text>
+  <text x="600" y="412" text-anchor="middle" class="title" style="font-size:18px">Wi-Fi / Serial</text>
+  <rect x="55" y="105" width="280" height="100" class="box input"/><text x="195" y="143" text-anchor="middle" class="h">Credencial RFID</text><text x="195" y="174" text-anchor="middle" class="t">Botão → GPIO 4</text>
+  <rect x="55" y="245" width="280" height="120" class="box input"/><text x="195" y="285" text-anchor="middle" class="h">Teclado 4×4</text><text x="195" y="316" text-anchor="middle" class="t">GPIO 13,12,14,27</text><text x="195" y="342" text-anchor="middle" class="t">GPIO 26,25,33,32</text>
+  <rect x="55" y="405" width="280" height="100" class="box input"/><text x="195" y="443" text-anchor="middle" class="h">Sensor PIR</text><text x="195" y="474" text-anchor="middle" class="t">OUT → GPIO 34</text>
+  <rect x="55" y="545" width="280" height="100" class="box input"/><text x="195" y="583" text-anchor="middle" class="h">Sensor de violação</text><text x="195" y="614" text-anchor="middle" class="t">Chave → GPIO 35</text>
+  <rect x="865" y="105" width="280" height="100" class="box output"/><text x="1005" y="143" text-anchor="middle" class="h">OLED SSD1306</text><text x="1005" y="174" text-anchor="middle" class="t">SDA 21 / SCL 22</text>
+  <rect x="865" y="245" width="280" height="100" class="box output"/><text x="1005" y="283" text-anchor="middle" class="h">Servo / Fechadura</text><text x="1005" y="314" text-anchor="middle" class="t">PWM → GPIO 18</text>
+  <rect x="865" y="385" width="280" height="100" class="box output"/><text x="1005" y="423" text-anchor="middle" class="h">Buzzer / Sirene</text><text x="1005" y="454" text-anchor="middle" class="t">Sinal → GPIO 19</text>
+  <rect x="865" y="525" width="280" height="120" class="box output"/><text x="1005" y="563" text-anchor="middle" class="h">Indicadores LED</text><text x="1005" y="594" text-anchor="middle" class="t">Verde → GPIO 16</text><text x="1005" y="620" text-anchor="middle" class="t">Vermelho → GPIO 17</text>
+  <path d="M335 155 C395 155 395 280 450 280" class="wire"/><path d="M335 305 H450" class="wire"/><path d="M335 455 H450" class="wire"/><path d="M335 595 C400 595 400 430 450 430" class="wire"/>
+  <path d="M750 280 C805 280 805 155 865 155" class="wire"/><path d="M750 320 H865" class="wire"/><path d="M750 390 C810 390 810 435 865 435" class="wire"/><path d="M750 430 C805 430 805 585 865 585" class="wire"/>
+  <text x="600" y="690" text-anchor="middle" class="small">Todos os módulos compartilham GND. O circuito editável está em diagram.json (Wokwi).</text>
+</svg>
