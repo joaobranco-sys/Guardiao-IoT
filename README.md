@@ -2,9 +2,12 @@
 
 > Projeto prático de IoT e Segurança da Informação desenvolvido na disciplina de Algoritmos e Estrutura de Dados (CESAR School).
 
-## 👥 Integrante da Equipe
+## 👥 Integrantes da Equipe
 
 - João Victor Santos Branco de Barros ([joao.branco@upe.br](mailto:joao.branco@upe.br) / [@joaobranco-sys](https://github.com/joaobranco-sys))
+- José Eduardo de Lima Silva ([eduardo.lsilva@upe.br](mailto:eduardo.lsilva@upe.br))
+- Eduardo José de Sousa ([eduardo.sousa@upe.br](mailto:eduardo.sousa@upe.br))
+- João Gomes Ferreira ([joao.gomesferreira@upe.br](mailto:joao.gomesferreira@upe.br))
 
 ---
 
